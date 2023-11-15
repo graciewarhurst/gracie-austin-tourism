@@ -1,0 +1,30 @@
+{% extends '_templates/base.njk' %}
+
+{% block page_title %}Discography{% endblock %}
+
+{% block page_description %}A list of Queen's studio albums.{% endblock %}
+
+{% block content %}
+<article class="container">
+  <h1>Studio albums</h1>
+  <p>Intro text here.</p>
+
+    <div class="row">
+    {% for album in queen.discography %}
+    <div class="col-sm-6 col-lg-4">
+      <div class="card text-bg-dark mb-4">
+        <div class="card-body">
+          <h5 class="card-title">{{ album.title }}</h5>
+            <h6>{{ album.year }}</h6>
+              <img src="img/discs/{{ album.image }}">
+
+          
+          {# <a href="#" target="_blank">Source</a> #}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+</article>
+{% endblock %}
