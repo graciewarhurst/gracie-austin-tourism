@@ -7,6 +7,11 @@
     <div class="col-md-8 offset-md-2">
       <h1>Intro header</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, corporis. Animi illo, esse molestias voluptatibus, nostrum, iure aspernatur eveniet ipsum nulla ab rem? Necessitatibus veritatis vitae est cupiditate illo porro!</p>
+      {% for member in queen.members %}
+        <h3><a href="members/{{ member.slug }}.html" target="_blank">{{ member.name }}</a></h3>
+        <p>from {{ member.birthplace }}</p>
+        <hr>
+      {% endfor %}
     </div>
   </div>
 </div>
