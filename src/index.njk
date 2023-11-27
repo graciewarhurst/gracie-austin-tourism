@@ -5,14 +5,22 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 offset-md-2">
-      <h1>Meet the members.</h1>
-      <p>Comprised of the remarkable quartet of Freddie Mercury, Brian May, John Deacon, and Roger Taylor, Queen is a legendary British rock band celebrated for their iconic anthems and theatrical performances.</p>
-      {% for member in queen.members %}
-        <img src="img/members/{{ member.imagebw }}" class="img-fluid">
-        <h3><a href="members/{{ member.slug }}.html" target="_blank">{{ member.name }}</a></h3>
-        <p>from {{ member.birthplace }}</p>
-        <hr>
-      {% endfor %}
+      <h1>Meet the members</h1>
+      <p>Comprised of the remarkable quartet of Freddie Mercury, Brian May, Roger Taylor and John Deacon, Queen is a legendary British rock band celebrated for their iconic anthems and theatrical performances.</p>
+    <!-- member cards -->
+    <div class="row">
+    {% for member in queen.members %}
+    <div class="col-sm-6 col-lg-6">
+      <div class="card text-bg-light mb-4">
+        <div class="card-body">
+          <h3><a href="members/{{ member.slug }}.html" target="_blank">{{ member.name }}</a></h3>
+          <p>from {{ member.birthplace }}</p>
+          <img src="img/members/{{ member.imagebw }}" class="card-img-top">
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    </div>
     </div>
   </div>
 </div>
