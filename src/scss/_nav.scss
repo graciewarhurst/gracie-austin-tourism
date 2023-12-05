@@ -1,9 +1,14 @@
 /* nav */
 
 .navbar {
-  margin-bottom: 0px;
-  h1 {
-    font-size: 5rem;
-  }
+  margin-bottom: 0px; 
 }
 
+.navbar a:hover {
+    color: white; 
+    text-decoration: underline;
+}
+  
+.navbar a:active { 
+    color: lightslategray; 
+}

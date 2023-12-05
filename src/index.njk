@@ -4,13 +4,13 @@
 {% block content %}
 <div class="container">
   <div class="row">
-    <div class="col-md-8 offset-md-2">
+    <div class="col-md-10 offset-md-1">
       <h1>Meet the members</h1>
       <p>Comprised of the remarkable quartet of Freddie Mercury, Brian May, Roger Taylor and John Deacon, Queen is a legendary British rock band celebrated for their iconic anthems and theatrical performances.</p>
     <!-- member cards -->
     <div class="row">
     {% for member in queen.members %}
-    <div class="col-sm-6 col-lg-6">
+    <div class="col-sm-9 col-lg-3">
       <div class="card text-bg-light mb-4">
         <div class="card-body">
           <h3><a href="members/{{ member.slug }}.html">{{ member.name }}</a></h3>
